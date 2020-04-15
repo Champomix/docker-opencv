@@ -17,14 +17,7 @@
 			<id>snapshots</id>
 		</server>
 	</servers>
-	<!-- <mirrors> -->
-	<!-- <mirror> -->
-	<!-- <mirrorOf>*</mirrorOf> -->
-	<!-- <name>test</name> -->
-	<!-- <url>http://hyperion.flownet.fr:6080/artifactory/test</url> -->
-	<!-- <id>test</id> -->
-	<!-- </mirror> -->
-	<!-- </mirrors> -->
+
 	<profiles>
 		<profile>
 		

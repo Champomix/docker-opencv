@@ -27,6 +27,7 @@
 	<!-- </mirrors> -->
 	<profiles>
 		<profile>
+		
 			<repositories>
 				<repository>
 					<snapshots>
@@ -43,6 +44,7 @@
 					<url>http://hyperion.flownet.fr:6080/artifactory/libs-snapshot</url>
 				</repository>
 			</repositories>
+			
 			<pluginRepositories>
 				<pluginRepository>
 					<snapshots>
@@ -59,6 +61,7 @@
 					<url>http://hyperion.flownet.fr:6080/artifactory/plugins-snapshot</url>
 				</pluginRepository>
 			</pluginRepositories>
+			
 			<id>artifactory</id>
 		</profile>
 	</profiles>

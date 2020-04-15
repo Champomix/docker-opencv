@@ -1,4 +1,4 @@
-FROM docker-java-py3-opencv420:latest
+FROM fjuillet/docker-java-py3-opencv420:latest
 MAINTAINER fjuillet <fjuillet@gmail.com>
 
 ARG DEBIAN_FRONTEND=noninteractive

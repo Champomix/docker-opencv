@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM debian:latest
 MAINTAINER fjuillet <fjuillet@gmail.com>
 
 RUN cwd=$(pwd)
@@ -19,6 +19,12 @@ RUN apt -y update \
 ########################################
 #### install ant
 ########################################
+
+RUN apt-get update && \
+    apt-get install -y wget && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
 RUN cd && \
     wget -q https://downloads.apache.org/ant/binaries/apache-ant-${ANT_VERSION}-bin.tar.gz && \
     tar -xzf apache-ant-${ANT_VERSION}-bin.tar.gz && \

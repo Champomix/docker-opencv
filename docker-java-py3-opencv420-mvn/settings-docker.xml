@@ -2,39 +2,68 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
                       https://maven.apache.org/xsd/settings-1.0.0.xsd">
+	
 	<localRepository>/usr/share/maven/ref/repository</localRepository>
 
-	<repositories>
-		<repository>
+	<servers>
+		<server>
+			<username>admin</username>
+			<password>AP6SPk1Z9RkozjTZw2XvLoDJFKy</password>
 			<id>central</id>
-			<url>http://hyperion.local:6080/artifactory/repo</url>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</repository>
-		<repository>
+		</server>
+		<server>
+			<username>admin</username>
+			<password>AP6SPk1Z9RkozjTZw2XvLoDJFKy</password>
 			<id>snapshots</id>
-			<url>http://hyperion.local:6080/artifactory/repo</url>
-			<releases>
-				<enabled>false</enabled>
-			</releases>
-		</repository>
-	</repositories>
-	<pluginRepositories>
-		<pluginRepository>
-			<id>central</id>
-			<url>http://hyperion.local:6080/artifactory/plugins-releases</url>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</pluginRepository>
-		<pluginRepository>
-			<id>snapshots</id>
-			<url>http://hyperion.local:6080/artifactory/plugins-snapshots</url>
-			<releases>
-				<enabled>false</enabled>
-			</releases>
-		</pluginRepository>
-	</pluginRepositories>
+		</server>
+	</servers>
+	<!-- <mirrors> -->
+	<!-- <mirror> -->
+	<!-- <mirrorOf>*</mirrorOf> -->
+	<!-- <name>test</name> -->
+	<!-- <url>http://hyperion.local:6080/artifactory/test</url> -->
+	<!-- <id>test</id> -->
+	<!-- </mirror> -->
+	<!-- </mirrors> -->
+	<profiles>
+		<profile>
+			<repositories>
+				<repository>
+					<snapshots>
+						<enabled>false</enabled>
+					</snapshots>
+					<id>central</id>
+					<name>libs-release</name>
+					<url>http://hyperion.local:6080/artifactory/libs-release</url>
+				</repository>
+				<repository>
+					<snapshots />
+					<id>snapshots</id>
+					<name>libs-snapshot</name>
+					<url>http://hyperion.local:6080/artifactory/libs-snapshot</url>
+				</repository>
+			</repositories>
+			<pluginRepositories>
+				<pluginRepository>
+					<snapshots>
+						<enabled>false</enabled>
+					</snapshots>
+					<id>central</id>
+					<name>plugins-release</name>
+					<url>http://hyperion.local:6080/artifactory/plugins-release</url>
+				</pluginRepository>
+				<pluginRepository>
+					<snapshots />
+					<id>snapshots</id>
+					<name>plugins-snapshot</name>
+					<url>http://hyperion.local:6080/artifactory/plugins-snapshot</url>
+				</pluginRepository>
+			</pluginRepositories>
+			<id>artifactory</id>
+		</profile>
+	</profiles>
+	<activeProfiles>
+		<activeProfile>artifactory</activeProfile>
+	</activeProfiles>
 
 </settings>
